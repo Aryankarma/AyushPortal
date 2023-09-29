@@ -13,7 +13,37 @@ body{
     justify-content: center;
 
 }
+.container{
+    display: flex;
+    flex-direction: row;
+}
 .form{
     width: 100%;
     margin: auto 15%;
+}
+.box{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+#signupbtn{
+    margin: 0 0 0 auto;
+    background-color:#333437 !important; 
+    color:white;
+}
+#signupbtn:hover{
+    background-color: #222 !important;
+}
+#loginbtn{
+    background-color:#4046E6 !important; 
+    color:white;
+}
+#loginbtn:hover{
+    background-color: #262ce9;
+}
+.rightText{
+    width: fit-content;
+    padding: 8%;
 }

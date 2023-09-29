@@ -25,9 +25,18 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
  
 function signIn(){
     return <div className='container'>
+        <Heading/>
         <LeftCont/>
         <RightText/>
     </div> 
+}
+
+const Heading=()=>{
+  return <div className='heading'>
+      <Typography className='headings' color={'#eee'} variant='h3' align='center' fontWeight={800}>Welcome to</Typography>
+      <Typography className='headings' color={'#eee'} variant='h3' align='center' fontWeight={100}>Startup-Investor portal.</Typography>
+      <Typography className='sub-headings' color={'#eee'} variant='caption' align='center' fontWeight={400}>Login to access your account</Typography>
+  </div>
 }
 
 const RightText=()=>{
@@ -37,7 +46,6 @@ const RightText=()=>{
         <Typography id='headText3' color={'#eee'} variant='caption' align='left' fontWeight={400}>Login to access your account</Typography>
     </div>
 }
-
 
 
 const LeftCont=()=>{
@@ -50,11 +58,11 @@ const LeftCont=()=>{
 
     return <section className='leftCont'>
         <div className='form'>
-            <Typography variant='h3' align='left' fontWeight={800} >Login</Typography>
-            <Input size='large' variant='caption' sx={{ marginTop: 5}} fullWidth label="userName" placeholder="Username" />
+            <Typography className='loginText' variant='h3' align='left' fontWeight={800} >Login</Typography>
+            <Input className='inputs' size='large' variant='caption' sx={{ marginTop: 5}} fullWidth label="userName" placeholder="Username" />
             {/* <Input size='small' variant='caption' type='password' sx={{ marginTop: 1, marginBottom: 2}} fullWidth label="password" placeholder="Password" /> */}
             
-            <Input
+            <Input className='inputs'
             size='small' variant='caption' 
             sx={{ marginTop: 1, marginBottom: 2}} 
             fullWidth label="password" 
@@ -75,7 +83,7 @@ const LeftCont=()=>{
           />
 
 
-            <Link  variant='caption' href="" target="_blank" rel="noopener noreferrer" color="#000000">Forgot Password?</Link>
+            <Link variant='caption' href="" target="_blank" rel="noopener noreferrer" color="#000000">Forgot Password?</Link>
             <br/>
             <Button id='loginbtn' sx={{borderRadius:2, marginTop:5, backgroundColor:'#4046E6', color:'white', '&:hover':{backgroundColor:'#262ce9'}}} textTransform="none" fullWidth variant='Contained'>Login</Button>
             <Box className="box" fullWidth sx={{marginTop:5}}>

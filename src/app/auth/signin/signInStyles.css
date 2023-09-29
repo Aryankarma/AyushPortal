@@ -1,7 +1,7 @@
 body{
     height: 100vh;
     background: 0;
-    background-color: #262ce9;
+    background-color: #4046E6;
 }
 .leftCont{
     height: 100vh;
@@ -11,11 +11,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 .container{
     display: flex;
     flex-direction: row;
+    max-width: 100% !important;
 }
 .form{
     width: 100%;
@@ -41,9 +41,116 @@ body{
     color:white;
 }
 #loginbtn:hover{
-    background-color: #262ce9;
+    background-color: rgb(16, 20, 134);
 }
 .rightText{
     width: fit-content;
-    padding: 8%;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#headText{
+    margin-top: 20%;
+}
+#headText, #headText2{
+    font-size: 75px;
+}
+.heading{
+    display: none;
+}
+
+@media screen and (min-device-width: 770px) and (max-device-width: 1024px){
+    #headText, #headText2{
+        font-size: 55px;
+    } 
+    #headText{
+        margin-top: 15%;
+    }
+    .rightText{
+        padding-left: 3%;
+    }
+    .form{
+        margin: auto 10%;
+    }
+}
+
+@media screen and (min-device-width: 770px) and (max-device-width: 800px){
+    #headText, #headText2{
+        font-size: 50px !important;
+    } 
+    .leftCont{
+        width: 50%;
+    }
+}
+@media screen and (min-device-width: 480px) and (max-device-width: 770px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightText{
+        display: none;
+    }
+    .heading{
+        margin: 45px;
+        width: fit-content;
+        padding-left: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    .leftCont{
+        border-radius: 15px;
+        width: 80%;
+        height: auto;
+    }
+    .headings, .sub-headings{
+        margin-top: 15px;
+    }
+    .form{
+        margin: 12%;
+    }
+}
+@media screen and (max-device-width: 480px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightText{
+        display: none;
+    }
+    .heading{
+        margin: 45px 5px;
+        width: fit-content;
+        padding-left: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+    .leftCont{
+        border-radius: 15px;
+        width: 80%;
+        height: auto; 
+    }
+    .headings, .sub-headings{
+        margin-top: 10px !important;
+    }
+    .headings{
+        font-size: 35px !important;
+    }
+    .form{
+        margin: 15%;
+    }
+    .loginText{
+        font-size: xx-small;
+    }
+    input{
+        font-size: x-small;    
+    }
+    #loginbtn{
+        font-size: xx-small;
+    }
+    #signupbtn{
+        font-size: xx-small;
+    }
 }

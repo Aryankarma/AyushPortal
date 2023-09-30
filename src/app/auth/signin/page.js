@@ -51,15 +51,12 @@ const RightText=()=>{
 const LeftCont=()=>{
 
     const [showPassword, setShowPassword] = useState(false);
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-    };
+    const handleClickShowPassword = () => setShowPassword((input) => !input);
 
     return <section className='leftCont'>
         <div className='form'>
             <Typography className='loginText' variant='h3' align='left' fontWeight={800} >Login</Typography>
-            <Input className='inputs' size='large' variant='caption' sx={{ marginTop: 5}} fullWidth label="userName" placeholder="Username" />
+            <Input className='inputs' size='small' variant='caption' sx={{ marginTop: 5}} fullWidth label="userName" placeholder="Username" />
             {/* <Input size='small' variant='caption' type='password' sx={{ marginTop: 1, marginBottom: 2}} fullWidth label="password" placeholder="Password" /> */}
             
             <Input className='inputs'
@@ -74,7 +71,6 @@ const LeftCont=()=>{
                 <IconButton
                   aria-label="toggle password visibility"
                   onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
                 >
                   {showPassword ? <VisibilityOff /> : <Visibility />}
                 </IconButton>
@@ -83,13 +79,13 @@ const LeftCont=()=>{
           />
 
 
-            <Link variant='caption' href="" target="_blank" rel="noopener noreferrer" color="#000000">Forgot Password?</Link>
-            <br/>
-            <Button id='loginbtn' sx={{borderRadius:2, marginTop:5, backgroundColor:'#4046E6', color:'white', '&:hover':{backgroundColor:'#262ce9'}}} textTransform="none" fullWidth variant='Contained'>Login</Button>
-            <Box className="box" fullWidth sx={{marginTop:5}}>
-                <Typography variant='caption' align='left'>Don't have an account?</Typography>
-                <Button id='signupbtn' sx={{borderRadius:2, marginTop:5}} textTransform="none" align='right' variant='Contained'>Sign Up</Button>
-            </Box>
+          <Link variant='caption' href="" target="_blank" rel="noopener noreferrer" color="#000000">Forgot Password?</Link>
+          <br/>
+          <Button id='loginbtn' sx={{borderRadius:2, marginTop:5, backgroundColor:'#4046E6', color:'white', '&:hover':{backgroundColor:'#262ce9'}}} textTransform="none" fullWidth variant='Contained'>Login</Button>
+          <Box className="box" fullWidth sx={{marginTop: 15}}>
+              <Typography variant='caption' align='left'>Don't have an account?</Typography>
+              <Button id='signupbtn' sx={{borderRadius:2, marginTop:5}} textTransform="none" align='right' variant='Contained'>Sign Up</Button>
+          </Box>
         </div>
     </section>
 }

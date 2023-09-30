@@ -1,0 +1,27 @@
+body{
+    height: 100vh;
+    background:0 ;
+    background-color: #4046E6;
+    position: relative;
+}
+.heading2{
+    margin: 1rem 0 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+.text{
+    font-size: 80px;
+}
+.FormContent{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+.formList{
+    width:35%;
+    display: flex;
+    flex-direction: column;
+}

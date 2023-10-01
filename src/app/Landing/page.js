@@ -27,9 +27,24 @@ import WebhookIcon from '@mui/icons-material/Webhook';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
 import CardMedia from '@mui/material/CardMedia';
 import { Height } from '@mui/icons-material';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
+// import react from "react";
+// import './footer.css';
+// import twitter from '../assets/facebook.svg'
+// import fb from '../assets/facebook.svg'
+// import linkedIn from '../assets/linkedin.svg'
+// import Instagram fr?om '../assets/square-instagram.svg'
+
 
 function halfHome(){
-    return <Container2/>
+    return (<React.Fragment>
+    <Container2/>
+    <Footer/>
+    </React.Fragment>)
 }
 
 const Container2=()=>{
@@ -107,6 +122,55 @@ Database</Typography>
             <Button id='getStartedBtn' sx={{ borderRadius: 2, marginTop: 2.5}} variant='Contained'>Get Started</Button>
         </Box>
     </Box>
+}
+
+const Footer=()=>{
+    return  <div className='footer'>
+        <div className='linksColumn'>
+            <div className='column'>
+                <Typography fontWeight={400} variant='h6'>Who We Are</Typography>
+                <Link className='Link' fontWeight={100} variant='caption' href="/company">Company</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/careers">Careers</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/partners">Partners</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/blog">Blog</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/press">Press</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/contact us">Contact</Link>
+            </div>
+            <div className='column'>
+                <Typography fontWeight={400} variant='h6'>What We Do</Typography>
+                <Link className='Link' fontWeight={100} variant='caption' href="/company">Crunchbase Starter</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/careers">Crunchbase Pro</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/partners">Crunchbase Enterprise</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/blog">Crunchbase Data Licensing</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/press">Customer Stories</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/contact us">Pricing</Link>
+            </div>
+            <div className='column'>
+               <Typography fontWeight={400} variant='h6'>Browse By:</Typography>
+                <Link className='Link' fontWeight={100} variant='caption' href="/company">Organizations</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/careers">People</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/partners">Events</Link>
+            </div>
+            <div className='column'>
+                <Typography fontWeight={400} variant='h6'>Stay Connected</Typography>
+                <Link className='Link' fontWeight={100} variant='caption' href="/company">Crunchbase News</Link>
+                <Link className='Link' fontWeight={100} variant='caption' href="/careers">Subscribe to the Crunchbase Daily</Link>
+                <div className='socials'>
+                    <FacebookIcon className='icons'/>
+                    <TwitterIcon className='icons'/>
+                    <LinkedInIcon className='icons'/>
+                    <InstagramIcon className='icons'/>
+                </div>
+            </div>
+        </div>
+        <div className='footerEnd'>
+            <Link className='Link linkMargin ayushPortal' fontWeight={900} variant='h5'>Ayush-Portal</Link>
+            <Link className='Link linkMargin' variant='caption'>© 2023 Crunchbase Inc. All Rights Reserved.</Link>
+            <Link className='Link linkMargin' variant='caption' href="/termsOfService">Terms of Service</Link>
+            <Link className='Link linkMargin' variant='caption' href="/privacyPolicy">Privacy Policy</Link>
+            <Link className='Link linkMargin' variant='caption' href="/Partners">Editorial Partners: Verizon Media Tech</Link>
+        </div>
+    </div> 
 }
 
 
